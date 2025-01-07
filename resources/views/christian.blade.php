@@ -254,6 +254,25 @@
                 .star {
                     margin-right: 5px;
                 }
+
+                .school-cards {
+        display: flex;
+        gap: 20px;
+    }
+    .card {
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        padding: 10px;
+        transition: box-shadow 0.3s ease, transform 0.3s ease;
+    }
+    .card img {
+        width: 100%;
+        border-radius: 8px;
+    }
+    .card:hover {
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        transform: translateY(-5px);
+    }
             </style>
 
             @endsection

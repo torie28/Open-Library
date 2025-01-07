@@ -50,7 +50,7 @@ class RegisterController extends Controller
 
         // Redirect based on religion
         if ($validated['religion'] === 'muslim') {
-            return redirect()->route('muslim-school')->with('success', 'Registration successful! Welcome to Muslim Schools.');
+            return redirect()->route('muslim-schools')->with('success', 'Registration successful! Welcome to Muslim Schools.');
         } elseif ($validated['religion'] === 'christian') {
             return redirect()->route('christian-schools')->with('success', 'Registration successful! Welcome to Christian Schools.');
         }
