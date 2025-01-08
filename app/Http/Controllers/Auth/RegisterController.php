@@ -30,6 +30,13 @@ class RegisterController extends Controller
         // Call the create method to insert user data
         $user = $this->create($request->all());
 
+         // Redirect based on religion
+         if ($request->religion === 'muslim') {
+            return redirect()->route('muslim-schools')->with('success', 'Registration successful! Welcome to Muslim Schools.');
+        } elseif ($request->religion === 'christian') {
+            return redirect()->route('christian-schools')->with('success', 'Registration successful! Welcome to Christian Schools.');
+        }
+
         // Redirect to a different page after successful registration
         return redirect()->route('home')->with('success', 'Registration successful!');
     }
@@ -48,11 +55,8 @@ class RegisterController extends Controller
 
         return $user; // Return the created user
 
-        // Redirect based on religion
-        if ($validated['religion'] === 'muslim') {
-            return redirect()->route('muslim-schools')->with('success', 'Registration successful! Welcome to Muslim Schools.');
-        } elseif ($validated['religion'] === 'christian') {
-            return redirect()->route('christian-schools')->with('success', 'Registration successful! Welcome to Christian Schools.');
-        }
+
+
+        
     }
 }

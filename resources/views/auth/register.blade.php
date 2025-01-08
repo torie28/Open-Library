@@ -14,8 +14,11 @@
             <div class="register-card">
                 <h2>Sign Up</h2>
 
-                <form method="POST" action="{{ route('register') }}">
+                <form id="registrationForm" method="POST" action="{{ route('register') }}">
                     @csrf
+
+                {{-- <form method="POST" action="{{ route('register') }}">
+                    @csrf --}}
 
                     <div class="form-group">
                         <label for="name" class="form-label">Full Name</label>
@@ -287,6 +290,27 @@
         }
     }
 </style>
+
+{{-- <script>
+    document.getElementById('registrationForm').addEventListener('submit', function(event) {
+        event.preventDefault();
+        document.getElementById('confirmationModal').style.display = 'block';
+    });
+
+    document.getElementById('confirmBtn').addEventListener('click', function() {
+        const religion = document.getElementById('religion').value;
+        if (religion === 'christian') {
+            document.getElementById('registrationForm').action = '{{ route('christian-schools') }}';
+        } else if (religion === 'muslim') {
+            document.getElementById('registrationForm').action = '{{ route('muslim-schools') }}';
+        }
+        document.getElementById('registrationForm').submit();
+    });
+
+    document.getElementById('cancelBtn').addEventListener('click', function() {
+        document.getElementById('confirmationModal').style.display = 'none';
+    });
+</script> --}}
 
 <script>
     document.getElementById('religion').addEventListener('change', function() {

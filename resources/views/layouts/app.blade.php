@@ -34,8 +34,10 @@
             transition: all 0.3s ease;
             margin: 0 10px;
         }
-        .nav-link:hover {
-            color: #666666 !important;
+        .nav-link:hover, .nav-link.active {
+            color: #ffffff !important;
+            background-color: #000000;
+            border-radius: 5px;
         }
         .navbar-toggler {
             border-color: #000000;
@@ -67,7 +69,7 @@
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item"><a class="nav-link" href="home">Home</a></li>
                     <li class="nav-item"><a class="nav-link" href="login">Login</a></li>
-                    <li class="nav-item"><a class="nav-link" href="register">Register</a></li>
+                    <li class="nav-item"><a id="nav-Link" class="nav-link" href="register">Register</a></li>
                 </ul>
             </div>
         </div>
@@ -80,5 +82,20 @@
 
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const registerLink = document.getElementById('registerLink');
+            if (registerLink) {
+                registerLink.addEventListener('click', function() {
+                    registerLink.classList.add('active');
+                });
+
+                // Check if the current URL matches the register link
+                if (window.location.pathname === '/register') {
+                    registerLink.classList.add('active');
+                }
+            }
+        });
+    </script>
 </body>
 </html>
