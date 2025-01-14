@@ -5,8 +5,8 @@
 <section id="hero" class="hero-container">
     <div class="hero-content">
         <div class="hero-text">
-            <h1>Register to Discover Your Perfect School</h1>
-            <p>Start your journey with us and find the best school that fits your needs and preferences.</p>
+            <h1>Unveil Your Path to Excellence</h1>
+            <p>Embark on an enlightening journey to discover the perfect school that aligns with your aspirations and values. Let us guide you to a place where education meets passion.</p>
         </div>
 
         <!-- Registration Form Section (Positioned on the right side of the hero) -->
@@ -17,9 +17,7 @@
                 <form id="registrationForm" method="POST" action="{{ route('register') }}">
                     @csrf
 
-                {{-- <form method="POST" action="{{ route('register') }}">
-                    @csrf --}}
-
+                    <!-- Full Name Field -->
                     <div class="form-group">
                         <label for="name" class="form-label">Full Name</label>
                         <input type="text" name="name" id="name" class="form-control @error('name') is-invalid @enderror" placeholder="Enter your full name" value="{{ old('name') }}" required>
@@ -30,36 +28,46 @@
                         @enderror
                     </div>
 
+                    <!-- Email Field -->
                     <div class="form-group">
-                        <label for="surname" class="form-label">Surname</label>
-                        <input type="text" name="surname" id="surname" class="form-control @error('surname') is-invalid @enderror" placeholder="Enter your surname" value="{{ old('surname') }}" required>
-                        @error('surname')
+                        <label for="email" class="form-label">Email Address</label>
+                        <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required placeholder="Email Address">
+                        @error('email')
                             <span class="invalid-feedback" role="alert">
                                 <strong>{{ $message }}</strong>
                             </span>
                         @enderror
                     </div>
 
+                    <!-- Password Field -->
                     <div class="form-group">
-                        <label for="age" class="form-label">Age</label>
-                        <input type="number" name="age" id="age" class="form-control @error('age') is-invalid @enderror" placeholder="Enter your age" value="{{ old('age') }}" required>
-                        @error('age')
+                        <label for="password" class="form-label">Password</label>
+                        <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required placeholder="Password">
+                        @error('password')
+                            <span class="invalid-feedback">
+                                <strong>{{ $message }}</strong>
+                            </span>
+                        @enderror
+                    </div>
+
+                    <!-- Confirm Password Field -->
+                    <div class="form-group">
+                        <label for="password_confirmation" class="form-label">Confirm Password</label>
+                        <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required placeholder="Confirm Password">
+                    </div>
+
+                    <!-- Date of Registration Field -->
+                    <div class="form-group">
+                        <label for="date" class="form-label">Date of Registration</label>
+                        <input type="date" name="date_of_registration" id="date" class="form-control @error('date_of_registration') is-invalid @enderror" value="{{ old('date_of_registration') }}" required>
+                        @error('date_of_registration')
                             <span class="invalid-feedback" role="alert">
                                 <strong>{{ $message }}</strong>
                             </span>
                         @enderror
                     </div>
 
-                    <div class="form-group">
-                        <label for="date_of_birth" class="form-label">Date of Birth</label>
-                        <input type="date" name="date_of_birth" id="date_of_birth" class="form-control @error('date_of_birth') is-invalid @enderror" value="{{ old('date_of_birth') }}" required>
-                        @error('date_of_birth')
-                            <span class="invalid-feedback" role="alert">
-                                <strong>{{ $message }}</strong>
-                            </span>
-                        @enderror
-                    </div>
-
+                    <!-- Religion Field -->
                     <div class="form-group">
                         <label for="religion" class="form-label">Religion</label>
                         <select name="religion" id="religion" class="form-control @error('religion') is-invalid @enderror" required>
@@ -102,6 +110,7 @@
         padding: 0;
         font-family: 'Poppins', sans-serif;
         scroll-behavior: smooth;
+        background: #f4f7fc;
     }
 
     /* Hero Section */
@@ -110,24 +119,26 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        background: linear-gradient(135deg, #000000, #333333);
+        background: linear-gradient(135deg, #f6d365, #fda085);
         color: white;
         position: relative;
+        padding: 0 3rem;
+        box-shadow: inset 0 0 200px rgba(0, 0, 0, 0.1);
     }
 
     #hero .hero-content {
         display: flex;
         justify-content: space-between;
         width: 100%;
-        padding: 0 2rem;
     }
 
     .hero-text {
         max-width: 50%;
+        animation: slideIn 1s ease-out;
     }
 
     .hero-text h1 {
-        font-size: 3rem;
+        font-size: 3.5rem;
         margin-bottom: 1rem;
         font-family: 'Rubik Vinyl', cursive;
         animation: fadeInUp 1s ease-out;
@@ -150,33 +161,31 @@
 
     .register-card {
         background: #ffffff;
-        border-radius: 1.2rem;
-        padding: 2rem 2.5rem;
-        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+        border-radius: 1.5rem;
+        padding: 2.5rem 3rem;
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
         animation: fadeInUp 1s ease-out;
-        position: relative;
+        width: 380px;
         transition: all 0.3s ease;
-        width: 350px;
     }
 
     .register-card:hover {
-        transform: translateY(-4px);
-        box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+        transform: translateY(-6px);
+        box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3);
     }
 
     .register-card h2 {
-        font-size: 2.5rem;
+        font-size: 2.7rem;
         color: #333;
-        margin-bottom: 2rem;
+        margin-bottom: 2.5rem;
         text-align: center;
     }
 
     .form-group {
-        margin-bottom: 1.5rem;
+        margin-bottom: 1.8rem;
     }
 
     .form-label {
-        font-family: 'Poppins', sans-serif;
         font-weight: 600;
         color: #333;
         margin-bottom: 0.5rem;
@@ -185,34 +194,34 @@
 
     .form-control {
         border: 2px solid #ddd;
-        border-radius: 0.5rem;
-        padding: 0.8rem 1.2rem;
+        border-radius: 1rem;
+        padding: 0.8rem 1.3rem;
         width: 100%;
         font-size: 1rem;
         transition: border-color 0.3s ease, box-shadow 0.3s ease;
     }
 
     .form-control:focus {
-        border-color: #333;
+        border-color: #f57c00;;
         box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
     }
 
     .register-btn {
-        background: #333;
+        background: #f57c00;;
         color: white;
-        padding: 1rem 2rem;
+        padding: 1.1rem 2.5rem;
         border-radius: 2rem;
         font-size: 1.2rem;
         font-weight: 600;
         width: 100%;
         border: none;
-        margin-top: 2rem;
+        margin-top: 2.5rem;
         transition: all 0.3s ease;
     }
 
     .register-btn:hover {
-        background: #555;
-        transform: translateY(-3px);
+        background: #e74c3c;
+        transform: translateY(-4px);
         box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
     }
 
@@ -261,7 +270,7 @@
     }
 
     .btn-confirm {
-        background-color: #000000;
+        background-color: #f57c00;;
         color: white;
     }
 
@@ -271,7 +280,7 @@
     }
 
     .btn-confirm:hover {
-        background-color: #000000;
+        background-color: #f57c00;;
     }
 
     .btn-cancel:hover {
@@ -289,28 +298,18 @@
             transform: translateY(0);
         }
     }
-</style>
 
-{{-- <script>
-    document.getElementById('registrationForm').addEventListener('submit', function(event) {
-        event.preventDefault();
-        document.getElementById('confirmationModal').style.display = 'block';
-    });
-
-    document.getElementById('confirmBtn').addEventListener('click', function() {
-        const religion = document.getElementById('religion').value;
-        if (religion === 'christian') {
-            document.getElementById('registrationForm').action = '{{ route('christian-schools') }}';
-        } else if (religion === 'muslim') {
-            document.getElementById('registrationForm').action = '{{ route('muslim-schools') }}';
+    @keyframes slideIn {
+        from {
+            opacity: 0;
+            transform: translateX(-50px);
         }
-        document.getElementById('registrationForm').submit();
-    });
-
-    document.getElementById('cancelBtn').addEventListener('click', function() {
-        document.getElementById('confirmationModal').style.display = 'none';
-    });
-</script> --}}
+        to {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+</style>
 
 <script>
     document.getElementById('religion').addEventListener('change', function() {

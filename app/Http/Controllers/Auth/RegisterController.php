@@ -21,9 +21,9 @@ class RegisterController extends Controller
         // Validate the form data
         $request->validate([
             'name' => 'required|string|max:255',
-            'surname' => 'required|string|max:255',
-            'age' => 'required|integer|min:1',
-            'date_of_birth' => 'required|date',
+            'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
+            'password' => ['required', 'string', 'min:4', 'confirmed'],
+            'date_of_registration' => 'required|date',
             'religion' => 'required|string',
         ]);
 
@@ -32,9 +32,9 @@ class RegisterController extends Controller
 
          // Redirect based on religion
          if ($request->religion === 'muslim') {
-            return redirect()->route('muslim-schools')->with('success', 'Registration successful! Welcome to Muslim Schools.');
+            return redirect()->route('muslim-Books')->with('success', 'Registration successful! Welcome to Muslim Schools.');
         } elseif ($request->religion === 'christian') {
-            return redirect()->route('christian-schools')->with('success', 'Registration successful! Welcome to Christian Schools.');
+            return redirect()->route('christian-Books')->with('success', 'Registration successful! Welcome to Christian Schools.');
         }
 
         // Redirect to a different page after successful registration
@@ -47,13 +47,14 @@ class RegisterController extends Controller
         // Create a new user in the database
         $user = User::create([
             'name' => $data['name'],
-            'surname' => $data['surname'],
-            'age' => $data['age'],
-            'date_of_birth' => $data['date_of_birth'],
+            'email' => $data['email'],
+            'password' => Hash::make($data['password']),
+            'date_of_registration' => $data['date_of_registration'],
             'religion' => $data['religion'],
         ]);
 
-        return $user; // Return the created user
+        // Return the created user
+        return $user; 
 
 
 

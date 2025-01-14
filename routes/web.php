@@ -29,9 +29,9 @@ Route::get('/home', function () {
 // school routes
 Route::get('/schools/{religion}', [SchoolController::class, 'showByReligion']);
 
-// school directory route
-Route::get('/muslim-schools', [SchoolController::class, 'muslim'])->name('muslim-schools');
-Route::get('/christian-schools', [SchoolController::class, 'christian'])->name('christian-schools');
+// Books directory route
+Route::get('/muslim-Books', [SchoolController::class, 'muslim'])->name('muslim-Books');
+Route::get('/christian-Books', [SchoolController::class, 'christian'])->name('christian-Books');
 
 
 // Registration routes
