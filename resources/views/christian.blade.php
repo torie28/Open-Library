@@ -23,15 +23,15 @@
         <div class="row g-4">
             @php
                 $books = [
-                    ['title' => 'The Purpose Driven Life', 'author' => 'Rick Warren', 'date' => '2002', 'rating' => 5, 'image' => 'book1.jpg'],
-                    ['title' => 'Mere Christianity', 'author' => 'C.S. Lewis', 'date' => '1952', 'rating' => 5, 'image' => 'book2.jpg'],
-                    ['title' => 'The Case for Christ', 'author' => 'Lee Strobel', 'date' => '1998', 'rating' => 4, 'image' => 'book3.jpg'],
-                    ['title' => 'Crazy Love', 'author' => 'Francis Chan', 'date' => '2008', 'rating' => 4, 'image' => 'book4.jpg'],
-                    ['title' => 'Radical', 'author' => 'David Platt', 'date' => '2010', 'rating' => 4, 'image' => 'book5.jpg'],
-                    ['title' => 'The Screwtape Letters', 'author' => 'C.S. Lewis', 'date' => '1942', 'rating' => 5, 'image' => 'book6.jpg'],
-                    ['title' => 'Jesus Calling', 'author' => 'Sarah Young', 'date' => '2004', 'rating' => 4, 'image' => 'book7.jpg'],
-                    ['title' => 'God\'s Smuggler', 'author' => 'Brother Andrew', 'date' => '1967', 'rating' => 5, 'image' => 'book8.jpg'],
-                    ['title' => 'The Prodigal God', 'author' => 'Timothy Keller', 'date' => '2008', 'rating' => 5, 'image' => 'book9.jpg'],
+                    ['title' => 'The Purpose Driven Life', 'author' => 'Rick Warren', 'date' => '2002', 'rating' => 5, 'image' => 'The Purpose Driven Life.jpeg'],
+                    ['title' => 'Mere Christianity', 'author' => 'C.S. Lewis', 'date' => '1952', 'rating' => 5, 'image' => 'Mere Christianity.png'],
+                    ['title' => 'The Case for Christ', 'author' => 'Lee Strobel', 'date' => '1998', 'rating' => 4, 'image' => 'The Case for Christ.jpeg'],
+                    ['title' => 'Crazy Love', 'author' => 'Francis Chan', 'date' => '2008', 'rating' => 4, 'image' => 'Crazy Love.jpeg'],
+                    ['title' => 'Radical', 'author' => 'David Platt', 'date' => '2010', 'rating' => 4, 'image' => 'Radical.jpeg'],
+                    ['title' => 'The Screwtape Letters', 'author' => 'C.S. Lewis', 'date' => '1942', 'rating' => 5, 'image' => 'The Screwtape Letters.jpeg'],
+                    ['title' => 'Jesus Calling', 'author' => 'Sarah Young', 'date' => '2004', 'rating' => 4, 'image' => 'Jesus Calling.jpeg'],
+                    ['title' => 'God\'s Smuggler', 'author' => 'Brother Andrew', 'date' => '1967', 'rating' => 5, 'image' => 'God\'s Smuggler.jpeg'],
+                    ['title' => 'The Prodigal God', 'author' => 'Timothy Keller', 'date' => '2008', 'rating' => 5, 'image' => 'The Prodigal God.jpeg'],
                 ];
             @endphp
 

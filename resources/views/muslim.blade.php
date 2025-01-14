@@ -23,15 +23,15 @@
         <div class="row g-4">
             @php
                 $books = [
-                    ['title' => 'The Quran', 'author' => 'Allah', 'date' => '610 CE', 'rating' => 5, 'image' => 'quran.jpg'],
-                    ['title' => 'The Sealed Nectar', 'author' => 'Safiy-ur-Rahman Mubarakpuri', 'date' => '1979', 'rating' => 5, 'image' => 'sealed-nectar.jpg'],
-                    ['title' => 'Fortress of the Muslim', 'author' => 'Said bin Ali bin Wahaf Al-Qahtani', 'date' => '1992', 'rating' => 5, 'image' => 'fortress.jpg'],
-                    // ['title' => 'The Ideal Muslimah', 'author' => 'Muhammad Ali Al-Hashimi', 'date' => '1998', 'rating' => 4, 'image' => 'ideal-muslimah.jpg'],
-                    ['title' => 'The Ideal Muslimah', 'author' => 'Muhammad Ali Al-Hashimi', 'date' => '1998', 'rating' => 4, 'image' => 'ideal-muslimah.jpg'],
-                    ['title' => 'In the Footsteps of the Prophet', 'author' => 'Tariq Ramadan', 'date' => '2007', 'rating' => 4, 'image' => 'footsteps.jpg'],
-                    ['title' => 'Purification of the Heart', 'author' => 'Hamza Yusuf', 'date' => '2004', 'rating' => 5, 'image' => 'purification.jpg'],
-                    ['title' => 'Love and Happiness', 'author' => 'Yasmin Mogahed', 'date' => '2017', 'rating' => 5, 'image' => 'love-happiness.jpg'],
-                    ['title' => 'Reclaim Your Heart', 'author' => 'Yasmin Mogahed', 'date' => '2012', 'rating' => 5, 'image' => 'reclaim.jpg'],
+                    ['title' => 'The Quran', 'author' => 'Allah', 'date' => '610 CE', 'rating' => 5, 'image' => 'images.jpeg'],
+                    ['title' => 'The Sealed Nectar', 'author' => 'Safiy-ur-Rahman Mubarakpuri', 'date' => '1979', 'rating' => 5, 'image' => 'download.jpeg'],
+                    ['title' => 'Fortress of the Muslim', 'author' => 'Said bin Ali bin Wahaf Al-Qahtani', 'date' => '1992', 'rating' => 5, 'image' => 'fortress.jpeg'],
+                    ['title' => 'The Ideal Muslimah', 'author' => 'Muhammad Ali Al-Hashimi', 'date' => '1998', 'rating' => 4, 'image' => 'ideal-muslimah.jpeg'],
+                    ['title' => 'The Ideal Muslimah', 'author' => 'Muhammad Ali Al-Hashimi', 'date' => '1998', 'rating' => 4, 'image' => 'ideal-muslimah.jpeg'],
+                    ['title' => 'In the Footsteps of the Prophet', 'author' => 'Tariq Ramadan', 'date' => '2007', 'rating' => 4, 'image' => 'In the Footsteps of the Prophet.jpeg'],
+                    ['title' => 'Purification of the Heart', 'author' => 'Hamza Yusuf', 'date' => '2004', 'rating' => 5, 'image' => 'Purification of the Heart.jpeg'],
+                    ['title' => 'Love and Happiness', 'author' => 'Yasmin Mogahed', 'date' => '2017', 'rating' => 5, 'image' => 'Love and Happiness.jpeg'],
+                    ['title' => 'Reclaim Your Heart', 'author' => 'Yasmin Mogahed', 'date' => '2012', 'rating' => 5, 'image' => 'Reclaim you Heart.jpeg'],
                 ];
             @endphp
 
